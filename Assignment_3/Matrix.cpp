@@ -42,7 +42,7 @@ Matrix ::Matrix(int **array, unsigned int m, unsigned int n) {
         matrix[i] = new unsigned int[columnsV];
 
         for(int j = 0; j < columnsV; j++){
-            matrix[i][j] = array[i][j];
+                matrix[i][j] = array[i][j];
         }
     }
 }
@@ -63,32 +63,38 @@ void Matrix ::set(unsigned int i, unsigned int j, int value) {
     matrix[i][j] = value;
 }
 
-//Matrix Matrix::operator+(const Matrix &mat) {
-//
-//}
-//
-//Matrix Matrix::operator-(const Matrix &mat) {
-//
-//}
-//
-//Matrix Matrix::operator*(const Matrix &mat) {
-//
-//}
-//
-//Matrix Matrix::operator~() const {
-//
-//}
-//
-//bool Matrix::operator==(const Matrix &mat) {
-//
-//}
+Matrix Matrix::operator+(const Matrix &mat) {
+
+}
+
+Matrix Matrix::operator-(const Matrix &mat) {
+
+}
+
+Matrix Matrix::operator*(const Matrix &mat) {
+
+}
+
+Matrix Matrix::operator~() const {
+    Matrix trans(columnsV,rowsV);
+    trans.matrix = new unsigned int* [columnsV];
+    for(int i = 0; i < columnsV; i++){
+        trans.matrix[i] = new unsigned int[columnsV];
+        for(int j = 0; j < rowsV; j++){
+            trans.matrix[i][j] = matrix[j][i];
+        }
+    }
+    return trans;
+}
+
+bool Matrix::operator==(const Matrix &mat) {
+
+}
 
 std::string Matrix::toStr() const {
     std::string stringMatrix = "";
 
     for(int i = 0; i < rowsV; i++){
-        matrix[i] = new unsigned int[columnsV];
-
         for(int j = 0; j < columnsV; j++){
             stringMatrix = stringMatrix + std::to_string(matrix[i][j]) + " ";;
         }
