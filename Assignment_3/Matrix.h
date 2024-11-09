@@ -2,8 +2,12 @@
 #ifndef CS264_MATRIX_H
 #define CS264_MATRIX_H
 #include <iostream>
-
+//declaring class methods in header file
 class Matrix {
+    private:
+        int rowsV; //variable to hold num of rows
+        int columnsV; //variable to hold num of columns
+        unsigned int** matrix; //double pointer to store matrix (2D Array)
     public:
         Matrix(unsigned int m, unsigned int n); //constructor that initialises matrix m x n, every element in is 0
         Matrix(const Matrix &mat); //copy constructor that copies every element from matrix mat
@@ -18,6 +22,7 @@ class Matrix {
         Matrix operator~() const; //Returns the transpose of current matrix.
         bool operator==(const Matrix &mat); //Returns true(1) if two matrices are the same, otherwise false(0). Two matrices are the same iff they both contain the same element at exact location in each matrix.
         std :: string toStr() const; //Returns a string representation ((showing every element in the matrix)) of the matrix.
+        ~Matrix(); //Destructor to deallocate memory
 };
 
 
