@@ -21,7 +21,7 @@ Matrix ::Matrix(unsigned  int m, unsigned int n) {
     }
 }
 
-/*Matrix constructor that copies a matrix into a new matrix*/
+/*Matrix copy   constructor that copies a matrix into a new matrix*/
 Matrix ::Matrix(const Matrix &mat) { //takes another matrix in through parameter
     rowsV = mat.rowsV;
     columnsV = mat.columnsV; /*assigning row and column variables with mat's m & n*/
