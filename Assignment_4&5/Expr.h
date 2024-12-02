@@ -7,7 +7,8 @@
 #include <string>
 
 class Expr {
-    virtual std::string toStr() = 0; //defining pure virtual function toStr
+    public:
+        virtual std::string toStr() const = 0; //defining pure virtual function toStr
 };
 
 
