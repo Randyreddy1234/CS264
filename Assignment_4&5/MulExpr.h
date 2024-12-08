@@ -10,6 +10,8 @@ class MulExpr : public BinaryExpr{
     public:
         MulExpr(Expr* left, Expr* right);
         virtual std::string toStr() const; //toStr method to override in implementation
+        virtual double eval(Visitor *Visitor);
+        virtual ~MulExpr(); //destructor for MulExpr
 };
 
 

@@ -9,7 +9,10 @@
 class SubExpr : public BinaryExpr{
     public:
         SubExpr(Expr* left, Expr* right);
-        virtual std::string toStr() const; //toStr method to override in implementation
+        virtual std::string toStr() const ; //toStr method to override in implementation
+        virtual double eval(Visitor *Visitor);
+        virtual ~SubExpr();//destructor for SubExpr
+
 };
 
 

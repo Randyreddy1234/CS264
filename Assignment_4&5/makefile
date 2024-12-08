@@ -6,7 +6,7 @@ CXXFLAGS = -Wall -std=c++17
 TARGET = main
 
 # Source files
-SRCS = main.cpp ConstExpr.cpp  BinaryExpr.cpp AddExpr.cpp SubExpr.cpp MulExpr.cpp DivExpr.cpp ModExpr.cpp
+SRCS = main.cpp ConstExpr.cpp BinaryExpr.cpp AddExpr.cpp SubExpr.cpp MulExpr.cpp DivExpr.cpp ModExpr.cpp NumVisitor.cpp
 
 # Default rule to build the program
 main: $(SRCS)

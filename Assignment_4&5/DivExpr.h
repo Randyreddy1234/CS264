@@ -9,7 +9,9 @@
 class DivExpr : public BinaryExpr {
     public:
         DivExpr(Expr* left, Expr* right);
-        virtual std::string toStr() const; //toStr method to override in implementation
+        virtual std::string toStr() const ; //toStr method to override in implementation
+        virtual double eval(Visitor *Visitor);
+        virtual ~DivExpr(); //destructor for DivExpr
 };
 
 

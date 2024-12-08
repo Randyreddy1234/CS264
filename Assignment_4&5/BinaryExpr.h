@@ -18,6 +18,8 @@ class BinaryExpr : public Expr{
         void setLeftExpr(Expr * left); //defining mutator method for left side of expression
         Expr* getRightExpr(); //defining Accessor method for right side of expression
         void setRightExpr(Expr* right); //defining mutator method for right side of expression
+        virtual double eval(Visitor* Visitor) = 0;
+        virtual ~BinaryExpr();//destructor for BinaryExpr
 };
 
 

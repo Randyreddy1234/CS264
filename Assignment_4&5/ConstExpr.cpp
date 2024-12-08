@@ -3,10 +3,19 @@
 //
 
 #include "ConstExpr.h"
+#include "Visitor.h"
 #include <sstream>
 
 ConstExpr ::ConstExpr(double in) { //implementation of ConstExpr constructor
     val = in; //assign parameter to val variable
+}
+
+double ConstExpr::getVal() const{
+    return val;
+}
+
+double ConstExpr::eval(Visitor *Visitor) {
+    return Visitor->visit(this);
 }
 
 std::string ConstExpr::toStr() const { //implementation of toStr method in ConstExpr

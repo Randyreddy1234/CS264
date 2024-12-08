@@ -24,3 +24,8 @@ Expr *BinaryExpr::getRightExpr() {
 void BinaryExpr::setRightExpr(Expr *right) {
     this->right = right;
 }
+
+BinaryExpr::~BinaryExpr() {
+    delete right;
+    delete left;
+}

@@ -10,6 +10,8 @@ class ModExpr : public BinaryExpr{
     public:
         ModExpr(Expr* left, Expr* right);
         virtual std::string toStr() const; //toStr method to override in implementation
+        virtual double eval(Visitor *Visitor);
+        virtual ~ModExpr(); //destructor for ModExpr
 };
 
 
