@@ -3,19 +3,19 @@
 //
 
 #include "ConstExpr.h"
-#include "Visitor.h"
+#include "Visitor.h" //header file for Visitor to override the Eval method
 #include <sstream>
 
 ConstExpr ::ConstExpr(double in) { //implementation of ConstExpr constructor
     val = in; //assign parameter to val variable
 }
 
-double ConstExpr::getVal() const{
-    return val;
+double ConstExpr::getVal() const{ //getter method to return value for constant expression
+    return val; //return val variable
 }
 
-double ConstExpr::eval(Visitor *Visitor) {
-    return Visitor->visit(this);
+double ConstExpr::eval(Visitor *Visitor) { //Override of eval method for constant expression
+    return Visitor->visit(this); //calls visit method from visitor to evaluate this ConstExpr
 }
 
 std::string ConstExpr::toStr() const { //implementation of toStr method in ConstExpr

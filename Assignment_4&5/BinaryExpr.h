@@ -18,7 +18,7 @@ class BinaryExpr : public Expr{
         void setLeftExpr(Expr * left); //defining mutator method for left side of expression
         Expr* getRightExpr(); //defining Accessor method for right side of expression
         void setRightExpr(Expr* right); //defining mutator method for right side of expression
-        virtual double eval(Visitor* Visitor) = 0;
+        virtual double eval(Visitor* Visitor) = 0; //pure virtual method of eval method to override in Subclasses of binaryExpr class
         virtual ~BinaryExpr();//destructor for BinaryExpr
 };
 

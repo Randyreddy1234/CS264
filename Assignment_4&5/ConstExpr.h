@@ -17,7 +17,7 @@ class ConstExpr : public Expr{
     ConstExpr(double val); //defining ConstExpr constructor
     virtual std::string toStr() const; //toStr method to override in implementation
     double getVal() const; //accessor method to retrieve val
-    virtual double eval(Visitor* Visitor) ;
+    virtual double eval(Visitor* Visitor) ; //virtual eval method to override
     virtual ~ConstExpr() = default; //destructor for ConstExpr
 };
 
